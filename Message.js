@@ -7,7 +7,15 @@ class Message extends React.Component {
 
     return (
       <div className={`message ${fromMe}`}>
-        <div className='username'>
+        <div
+           className='username'
+           style={{
+             background: 'black',
+             borderRadius: '10px',
+             color: 'white',
+             paddingLeft: '5px',
+           }}
+        >
           { this.props.username }
         </div>
         <div className='message-body'>
