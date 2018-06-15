@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/CurrentCoin/chat-template#readme",
   "dependencies": {
-    "bootstrap": "^4.1.1",
     "moment-timezone": "^0.5.17",
     "react-bootstrap": "^0.32.1",
     "react-moment": "^0.7.6",

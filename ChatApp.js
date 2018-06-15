@@ -1,5 +1,6 @@
 import React from 'react';
 import io from 'socket.io-client';
+import {Col, Row} from 'react-bootstrap';
 import Messages from './Messages';
 import ChatInput from './ChatInput';
 
@@ -13,6 +14,8 @@ class ChatApp extends React.Component {
     this.sendHandler = this.sendHandler.bind(this);
 
     const namespace = this.props.serviceAddress || 'preview'
+    const timestamp = Date.now();
+    const currentTime = this.props.timestamp;
 
     // Connect to the server
     this.socket = io(chatAppBackEndUrl + '/' + namespace, {
@@ -28,6 +31,7 @@ class ChatApp extends React.Component {
   sendHandler(message) {
     const messageObject = {
       username: this.props.username,
+      currentTime: this.props.timestamp,
       message
     };
 
@@ -47,15 +51,35 @@ class ChatApp extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <h3>Chat</h3>
-        <Messages messages={this.state.messages} />
-        <ChatInput onSend={this.sendHandler} />
-      </div>
+      <div>
+        <Col xs={6} md={6}>
+          <Row className="show-grid">
+              <div><img  class="homepage-logo" src={ require('./logo.64cad023.svg')} alt="CurrentCoin"/></div>
+          </Row>
+        
+          <Row className="show-grid">
+              <Col xs={7} md={7}>
+              <div className="chat-box">
+                <h1>Connect.</h1>
+                <Messages messages={this.state.messages} />
+                <div>
+                  <ChatInput onSend={this.sendHandler} />
+                </div>
+              </div>
+          </Col> 
+          </Row>  
+        </Col>
+        <Col>
+            <div id="chatnow"> 
+              <img src={ require('./chatnow.png')} alt="Connect."/>
+            </div>
+        </Col>
+      </div>  
     );
   }
 
 }
+
 ChatApp.defaultProps = {
   username: 'Anonymous'
 };

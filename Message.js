@@ -12,15 +12,7 @@ class Message extends React.Component {
     // else if the date was sent yesterday, show "June 12, 2018" "5:00 pm"
     return (
       <div className={`message ${fromMe}`}>
-        <div
-           className='username'
-           style={{
-             background: 'black',
-             borderRadius: '10px',
-             color: 'white',
-             paddingLeft: '5px',
-           }}
-        >
+        <div className='username'>
           { this.props.username }
         </div>
         <div className='message-datetime'>

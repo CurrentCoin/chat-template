@@ -1,6 +1,7 @@
 import React from 'react';
 import ChatApp from './ChatApp';
 import {Glyphicon, Col, Row, FormControl, FormGroup, ControlLabel, Button} from 'react-bootstrap';
+
 import './index.css'
 
 class App extends React.Component {
@@ -26,22 +27,23 @@ class App extends React.Component {
     if (this.state.submitted) {
       // Form was submitted, now show the main App
       return ([
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>,
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/>,        
-        <ChatApp username={this.state.username} />
+        <ChatApp username={this.state.username} />,
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />,
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" />
       ]);
     }
 
     // Initial page load, show a simple login form
     return (
       <div>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/>          
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" />
+
         <Col xs={6} md={6}>
           <Row className="show-grid">
               <div><img  class="homepage-logo" src={ require('./logo.64cad023.svg')} alt="CurrentCoin"/></div>
           </Row>
-        
+
           <Row className="show-grid">
             <Col xs={7} md={7}>
               <div className="enter-id">
@@ -53,13 +55,13 @@ class App extends React.Component {
                     </div>
                     <div id="input-instructions">
                       <ControlLabel>Your username</ControlLabel>
-                    </div>           
+                    </div>
                     <div id="user-id-input-textbox">
-                      <FormControl 
+                      <FormControl
                         type="text"
                         placeholder="User42"
-                        onChange={this.usernameChangeHandler} 
-                      />  
+                        onChange={this.usernameChangeHandler}
+                      />
                     </div>
                     </Row>
                     <Row className="show-grid" id="join-chat-button-row">
@@ -68,15 +70,15 @@ class App extends React.Component {
                   </FormGroup>
               </form>
             </div>
-          </Col> 
-        </Row>  
+          </Col>
+        </Row>
       </Col>
       <Col>
-          <div id="chatnow"> 
+          <div id="chatnow">
             <img src={ require('./chatnow.png')} alt="Connect."/>
           </div>
       </Col>
-     </div> 
+     </div>
     );
   }
 }
