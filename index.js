@@ -2,7 +2,6 @@ import React from 'react';
 import ChatApp from './ChatApp';
 import {Glyphicon, Col, Row, FormControl, FormGroup, ControlLabel, Button} from 'react-bootstrap';
 import './index.css'
-import './node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 class App extends React.Component {
   constructor(props) {
@@ -26,15 +25,18 @@ class App extends React.Component {
   render() {
     if (this.state.submitted) {
       // Form was submitted, now show the main App
-      return (
+      return ([
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>,
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/>,        
         <ChatApp username={this.state.username} />
-      );
+      ]);
     }
 
     // Initial page load, show a simple login form
     return (
-      
       <div>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/>          
         <Col xs={6} md={6}>
           <Row className="show-grid">
               <div><img  class="homepage-logo" src={ require('./logo.64cad023.svg')} alt="CurrentCoin"/></div>
@@ -74,7 +76,7 @@ class App extends React.Component {
             <img src={ require('./chatnow.png')} alt="Connect."/>
           </div>
       </Col>
-     </div>  
+     </div> 
     );
   }
 }
