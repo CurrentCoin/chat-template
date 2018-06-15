@@ -1,0 +1,28 @@
+{
+  "name": "chat-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/react-template-preview/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CurrentCoin/chat-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CurrentCoin/chat-template/issues"
+  },
+  "homepage": "https://github.com/CurrentCoin/chat-template#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "moment-timezone": "^0.5.17",
+    "react-bootstrap": "^0.32.1",
+    "react-moment": "^0.7.6",
+    "react-template-preview": "^1.0.27",
+    "socket.io-client": "^2.1.1"
+  }
+}
