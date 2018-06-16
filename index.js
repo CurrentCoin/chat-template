@@ -27,21 +27,21 @@ class App extends React.Component {
     if (this.state.submitted) {
       // Form was submitted, now show the main App
       return ([
-        <ChatApp username={this.state.username} />,
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />,
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" />
+        <ChatApp key="0" username={this.state.username} />,
+        <link key="1" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossOrigin="anonymous" />,
+        <link key="2" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossOrigin="anonymous" />
       ]);
     }
 
     // Initial page load, show a simple login form
     return (
       <div>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossOrigin="anonymous" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossOrigin="anonymous" />
 
         <Col xs={6} md={6}>
           <Row className="show-grid">
-              <div><img  class="homepage-logo" src={ require('./logo.64cad023.svg')} alt="CurrentCoin"/></div>
+              <div><img  className="homepage-logo" src={ require('./logo.64cad023.svg')} alt="CurrentCoin"/></div>
           </Row>
 
           <Row className="show-grid">
@@ -65,7 +65,8 @@ class App extends React.Component {
                     </div>
                     </Row>
                     <Row className="show-grid" id="join-chat-button-row">
-                          <Button type="submit" id="join-chat-button" bsSize="large" bsStyle="" style={ {background: 'white', color: '0b42b2', }} bsClass="btn">Join<Glyphicon glyph="glyphicon glyphicon-chevron-right" /></Button>
+                      {/* bsStyle="" */}
+                      <Button type="submit" id="join-chat-button" bsSize="large" style={ {background: 'white', color: '0b42b2', }} bsClass="btn">Join<Glyphicon glyph="glyphicon glyphicon-chevron-right" /></Button>
                     </Row>
                   </FormGroup>
               </form>

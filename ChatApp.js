@@ -14,8 +14,8 @@ class ChatApp extends React.Component {
     this.sendHandler = this.sendHandler.bind(this);
 
     const namespace = this.props.serviceAddress || 'preview'
-    const timestamp = Date.now();
-    const currentTime = this.props.timestamp;
+    // const timestamp = Date.now();
+    // const currentTime = this.props.timestamp;
 
     // Connect to the server
     this.socket = io(chatAppBackEndUrl + '/' + namespace, {
@@ -54,9 +54,9 @@ class ChatApp extends React.Component {
       <div>
         <Col xs={6} md={6}>
           <Row className="show-grid">
-              <div><img  class="homepage-logo" src={ require('./logo.64cad023.svg')} alt="CurrentCoin"/></div>
+              <div><img  className="homepage-logo" src={ require('./logo.64cad023.svg')} alt="CurrentCoin"/></div>
           </Row>
-        
+
           <Row className="show-grid">
               <Col xs={7} md={7}>
               <div className="chat-box">
@@ -66,15 +66,15 @@ class ChatApp extends React.Component {
                   <ChatInput onSend={this.sendHandler} />
                 </div>
               </div>
-          </Col> 
-          </Row>  
+          </Col>
+          </Row>
         </Col>
         <Col>
-            <div id="chatnow"> 
+            <div id="chatnow">
               <img src={ require('./chatnow.png')} alt="Connect."/>
             </div>
         </Col>
-      </div>  
+      </div>
     );
   }
 
