@@ -1,4 +1,4 @@
-body, html {
+/* body, html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -16,6 +16,11 @@ body {
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
+} */
+
+.chat-wrapper {
+  background: linear-gradient(to bottom right, blue, white);
+  height: 100%;
 }
 
 .p-title-container {
@@ -54,10 +59,7 @@ body {
 }
 
 img.homepage-logo {
-  display: flex;
   width: 40%;
-  margin-top: 5%;
-  margin-left: 5%;
 }
 
 #chatnow {
@@ -90,4 +92,49 @@ h1 {
   height:5%;
   position: fixed;
   color: black;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-button {
+  background: white;
+  color: #0b42b2;
+  border: none;
+  border-radius: 0.3em;
+  width: 30%;
+  padding: 0.5em;
+  margin-top: 10em;
+}
+
+.username-form {
+  margin: 3em;
+  width: 50%;
+}
+
+.header {
+  font-size: 1.5em;
+  margin: 3em;
+}
+
+.username-input {
+  width: 80%;
+  padding: 0.5em;
+  margin: 1em;
+  border-radius: 0.3em;
+}
+
+.username-label {
+  font-weight: bold;
 }

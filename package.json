@@ -21,7 +21,7 @@
     "moment-timezone": "^0.5.17",
     "react-bootstrap": "^0.32.1",
     "react-moment": "^0.7.6",
-    "react-template-preview": "^1.0.27",
+    "react-template-preview": "^1.0.28",
     "socket.io-client": "^2.1.1"
   }
 }
