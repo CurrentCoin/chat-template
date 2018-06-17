@@ -68,9 +68,7 @@ class App extends React.Component {
           }
 
         </div>
-        <div id="chatnow">
-          <img src={chatNowImage} alt="Connect." />
-        </div>
+        <img src={chatNowImage} className="chatnow" alt="Connect." />
       </div>
     );
   }
