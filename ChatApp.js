@@ -1,6 +1,5 @@
 import React from 'react';
 import io from 'socket.io-client';
-import {Col, Row} from 'react-bootstrap';
 import Messages from './Messages';
 import ChatInput from './ChatInput';
 
@@ -52,28 +51,11 @@ class ChatApp extends React.Component {
   render() {
     return (
       <div>
-        <Col xs={6} md={6}>
-          <Row className="show-grid">
-              <div><img  className="homepage-logo" src={ require('./logo.64cad023.svg')} alt="CurrentCoin"/></div>
-          </Row>
-
-          <Row className="show-grid">
-              <Col xs={7} md={7}>
-              <div className="chat-box">
-                <h1>Connect.</h1>
-                <Messages messages={this.state.messages} />
-                <div>
-                  <ChatInput onSend={this.sendHandler} />
-                </div>
-              </div>
-          </Col>
-          </Row>
-        </Col>
-        <Col>
-            <div id="chatnow">
-              <img src={ require('./chatnow.png')} alt="Connect."/>
-            </div>
-        </Col>
+        <div className="header">
+          Connect.
+        </div>
+        <Messages messages={this.state.messages} />
+        <ChatInput onSend={this.sendHandler} />
       </div>
     );
   }

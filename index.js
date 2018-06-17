@@ -25,44 +25,47 @@ class App extends React.Component {
   }
 
   render() {
-    if (this.state.submitted) {
-      // Form was submitted, now show the main App
-      return (
-        <ChatApp username={this.state.username} />
-      );
-    }
-
-    // Initial page load, show a simple login form
     return (
       <div className="row chat-wrapper">
         <div className="col">
           <img className="homepage-logo" src={currentCoinLogo} alt="CurrentCoin" />
 
-          <div className="header">
-            Chat with <em>your</em> people.
-          </div>
+          {
+            this.state.submitted
+              // Form was submitted, now show the main App
+              ? <ChatApp username={this.state.username} />
 
-          <form
-            className="username-form col"
-            onSubmit={ this.usernameSubmitHandler }
-          >
-            <label className="username-label">
-              Your Username
-            </label>
-            <input
-              className="username-input"
-              type="text"
-              placeholder="User42"
-              onChange={this.usernameChangeHandler}
-            />
+              // Initial page load, show a simple login form
+              : (
+                <div className="col full-width">
+                  <div className="header">
+                    Chat with <em>your</em> people.
+                  </div>
 
-            <button
-              className="submit-button"
-              type="submit"
-            >
-              Join
-            </button>
-          </form>
+                  <form
+                    className="username-form col"
+                    onSubmit={ this.usernameSubmitHandler }
+                  >
+                    <label className="username-label">
+                      Your Username
+                    </label>
+                    <input
+                      className="username-input"
+                      type="text"
+                      placeholder="User42"
+                      onChange={this.usernameChangeHandler}
+                    />
+
+                    <button
+                      className="submit-button"
+                      type="submit"
+                    >
+                      Join
+                    </button>
+                  </form>
+                </div>
+              )
+          }
 
         </div>
         <div id="chatnow">
