@@ -62,18 +62,18 @@ img.homepage-logo {
   width: 100%;
 }
 
-#chat-input {
+/* #chat-input {
   bottom: 2%;
   width: 33%;
   height:5%;
   position: fixed;
   color: black;
-}
+} */
 
 .row {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
@@ -123,4 +123,24 @@ img.homepage-logo {
 
 .chatnow {
   width: 40%;
+  margin-right: 10%;
+}
+
+.message-datetime {
+  font-size: 0.5em;
+}
+
+.username {
+  font-weight: bold
+}
+
+.username, .message-body {
+  padding: 0.2em;
+  font-size: 0.7em;
+}
+
+.messages {
+  overflow: auto;
+  height: 20em;
+  margin: 1em 0;
 }

@@ -52,7 +52,7 @@ class App extends React.Component {
                     <input
                       className="username-input"
                       type="text"
-                      placeholder="User42"
+                      // placeholder="User42"
                       onChange={this.usernameChangeHandler}
                     />
 
