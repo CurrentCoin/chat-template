@@ -12,12 +12,14 @@ class Message extends React.Component {
     // else if the date was sent yesterday, show "June 12, 2018" "5:00 pm"
     return (
       <div className={`message ${fromMe}`}>
-        <div className='row'>
+        <div className='row message-row'>
           <div className='username'>
             { this.props.username }
           </div>
           <div className='message-datetime'>
-            <Moment>{ this.props.rightNow }</Moment>
+            <Moment>
+              { this.props.rightNow }
+            </Moment>
           </div>
         </div>
         <div className='message-body'>

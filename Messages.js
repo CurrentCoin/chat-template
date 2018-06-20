@@ -15,7 +15,7 @@ class Messages extends React.Component {
           <Message
             key={i}
             username={message.username}
-            currentTime= {message.currentTime}
+            currentTime={message.currentTime}
             message={message.message}
             fromMe={message.fromMe} />
         );
