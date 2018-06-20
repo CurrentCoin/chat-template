@@ -15,6 +15,8 @@ class ChatApp extends React.Component {
     // this.props.serviceAddress is passed in by the service deployer when it is deployed
     const namespace = this.props.serviceAddress || 'preview'
 
+    console.log('namespace:', namespace)
+
     // Connect to the server
     this.socket = io(chatAppBackEndUrl + '/' + namespace, {
       query: `username=${props.username}`
