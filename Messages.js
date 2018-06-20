@@ -4,7 +4,7 @@ import Message from './Message';
 class Messages extends React.Component {
   componentDidUpdate() {
     // There is a new message in the state, scroll to bottom of list
-    const objDiv = document.getElementById('messageList');
+    const objDiv = document.getElementById('Chat-messageList');
     objDiv.scrollTop = objDiv.scrollHeight;
   }
 
@@ -22,7 +22,7 @@ class Messages extends React.Component {
       });
 
     return (
-      <div className='messages' id='messageList'>
+      <div className='Chat-messages' id='Chat-messageList'>
         { messages }
       </div>
     );

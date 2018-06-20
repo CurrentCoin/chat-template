@@ -26,9 +26,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="row chat-wrapper">
-        <div className="col">
-          <img className="homepage-logo" src={currentCoinLogo} alt="CurrentCoin" />
+      <div className="Chat-row Chat-wrapper">
+        <div className="Chat-col">
+          <img className="Chat-homepage-logo" src={currentCoinLogo} alt="CurrentCoin" />
 
           {
             this.state.submitted
@@ -37,26 +37,26 @@ class App extends React.Component {
 
               // Initial page load, show a simple login form
               : (
-                <div className="col full-width">
-                  <div className="header">
+                <div className="Chat-col Chat-full-width">
+                  <div className="Chat-header">
                     Chat with <em>your</em> people.
                   </div>
 
                   <form
-                    className="username-form col"
+                    className="Chat-sername-form Chat-col"
                     onSubmit={ this.usernameSubmitHandler }
                   >
-                    <label className="username-label">
+                    <label className="Chat-username-label">
                       Your Username
                     </label>
                     <input
-                      className="input"
+                      className="Chat-input"
                       type="text"
                       onChange={this.usernameChangeHandler}
                     />
 
                     <button
-                      className="submit-button"
+                      className="Chat-submit-button"
                       type="submit"
                     >
                       Join
@@ -67,7 +67,7 @@ class App extends React.Component {
           }
 
         </div>
-        <img src={chatNowImage} className="chatnow" alt="Connect." />
+        <img src={chatNowImage} className="Chat-chatnow" alt="Connect." />
       </div>
     );
   }

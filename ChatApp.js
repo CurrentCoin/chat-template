@@ -49,8 +49,8 @@ class ChatApp extends React.Component {
 
   render() {
     return (
-      <div className="chat-app-wrapper">
-        <div className="chat-header">
+      <div className="Chat-app-wrapper">
+        <div className="Chat-chat-header">
           Connect.
         </div>
         <Messages messages={this.state.messages} />
