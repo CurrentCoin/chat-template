@@ -29,13 +29,12 @@ class ChatInput extends React.Component {
     return (
       <div className="chat-input">
         <form onSubmit={this.submitHandler}>
-          {/* <div> */}
-            <input autoComplete="off" type="text"
-              onChange={this.textChangeHandler}
-              value={this.state.chatInput}
-              placeholder="Write a message..."
-              required />
-          {/* </div> */}
+          <input autoComplete="off" type="text"
+            className="input"
+            onChange={this.textChangeHandler}
+            value={this.state.chatInput}
+            placeholder="Write a message..."
+            required />
         </form>
       </div>
     );

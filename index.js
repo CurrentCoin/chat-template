@@ -50,7 +50,7 @@ class App extends React.Component {
                       Your Username
                     </label>
                     <input
-                      className="username-input"
+                      className="input"
                       type="text"
                       onChange={this.usernameChangeHandler}
                     />
