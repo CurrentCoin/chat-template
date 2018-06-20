@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon node_modules/react-template-preview/index.js"
+    "start": "BROWSER=none nodemon -e js,json,css node_modules/react-template-preview/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/CurrentCoin/chat-template#readme",
   "dependencies": {
-    "moment-timezone": "^0.5.17",
+    "moment": "^2.22.2",
     "react-moment": "^0.7.6",
     "react-template-preview": "latest",
     "socket.io-client": "^2.1.1"
