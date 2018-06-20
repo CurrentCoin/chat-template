@@ -12,9 +12,8 @@ class ChatApp extends React.Component {
     this.state = { messages: [] };
     this.sendHandler = this.sendHandler.bind(this);
 
+    // this.props.serviceAddress is passed in by the service deployer when it is deployed
     const namespace = this.props.serviceAddress || 'preview'
-    // const timestamp = Date.now();
-    // const currentTime = this.props.timestamp;
 
     // Connect to the server
     this.socket = io(chatAppBackEndUrl + '/' + namespace, {
@@ -30,7 +29,7 @@ class ChatApp extends React.Component {
   sendHandler(message) {
     const messageObject = {
       username: this.props.username,
-      currentTime: this.props.timestamp,
+      currentTime: Date.now(),
       message
     };
 

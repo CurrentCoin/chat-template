@@ -33,7 +33,7 @@ class App extends React.Component {
           {
             this.state.submitted
               // Form was submitted, now show the main App
-              ? <ChatApp username={this.state.username} />
+              ? <ChatApp username={this.state.username} { ...this.props } />
 
               // Initial page load, show a simple login form
               : (
@@ -52,7 +52,6 @@ class App extends React.Component {
                     <input
                       className="username-input"
                       type="text"
-                      // placeholder="User42"
                       onChange={this.usernameChangeHandler}
                     />
 

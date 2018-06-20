@@ -17,9 +17,9 @@ class Message extends React.Component {
             { this.props.username }
           </div>
           <div className='message-datetime'>
-            <Moment>
-              { this.props.rightNow }
-            </Moment>
+            {/* <Moment> */}
+              { this.props.currentTime }
+            {/* </Moment> */}
           </div>
         </div>
         <div className='message-body'>
